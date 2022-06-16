@@ -1,0 +1,15 @@
+{% extends 'helloworld/base.html' %}
+{% block title %}
+Студенту
+{% endblock %}
+{% block content %}
+<header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/timetable" class="nav-link">Расписание занятий</a></li>
+        <li class="nav-item"><a href="/schedule" class="nav-link">График учебного процесса</a></li>
+        <li class="nav-item"><a href="/scholarship" class="nav-link">Стипендии и иные виды материальной поддержки</a></li>
+        <li class="nav-item"><a href="/studentlife" class="nav-link">Студенческая жизнь</a></li>
+      </ul>
+    </header>
+{% block info %} {% endblock %}
+{% endblock %}
