@@ -4,9 +4,8 @@ USER root
 RUN groupadd -r vasyandre && useradd -r -g vasyandre vasyandre && python -m pip install Django==4.0.5
 WORKDIR /app
 COPY . /app
-EXPOSE 8443 8000
-RUN chown -R vasyandre:vasyandre /app
-
+EXPOSE 8000
+RUN chown -R vasyandre:vasyandre /app && chmod +x entrypoint-django.sh
 USER vasyandre
-ENTRYPOINT [ "entrypoint-django.sh" ]
+ENTRYPOINT [ "./entrypoint-django.sh" ]
 
